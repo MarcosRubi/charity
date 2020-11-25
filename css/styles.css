@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400&family=Pragati+Narrow:wght@400;700&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Hind Siliguri", sans-serif;
+  color: #222;
+  font-size: 18px;
+  /* font-family: "Pragati Narrow", sans-serif; */
+}
+
+a {
+  text-decoration: none;
+}
+.h {
+  height: 1400px;
+}
+header {
+  position: fixed;
+  width: 100%;
+  padding: 20px 100px;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  transition: all 500ms;
+}
+header.sticky {
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); 
+}
+.logo span a {
+  font-size: 1.8rem;
+  color: #2bb9ab;
+  font-weight: 700;
+}
+nav {
+  flex-basis: 75%;
+}
+nav.menu ul {
+  display: flex;
+}
+nav.menu ul li {
+  list-style: none;
+}
+nav.menu ul li a {
+  padding: 10px 20px;
+}
+.btn {
+  padding: 8px 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 500ms;
+  outline: none;
+}
+.btn-primary {
+  background: #2bb9ab;
+  border: 1px solid #2bb9ab;
+  color: #fff;
+}
+.btn-primary:hover {
+  background: #1d8972;
+}
+.btn-primary:focus {
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.349);
+}
+@media (max-width: 992px) {
+  header{
+    padding: 20px 60px;
+  }
+  nav {
+    flex-basis: 50%;
+  }
+}
+@media (max-width: 768px) {
+  header {
+    z-index: 200;
+    justify-content: space-between;
+  }
+  
+  .toggle {
+    order: 3;
+    background-image: url(../images/menu.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: invert(1);
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+  }
+  .toggle.active {
+    background-image: url(../images/close.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: invert(1);
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+  }
+  nav.menu {
+    order: 4;
+    position: fixed;
+    top: 94px;
+    right: -100%;
+    display: block;
+    padding: 100px 50px;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    transition: all 800ms;
+    z-index: 150;
+    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.2); 
+
+  }
+  nav.menu.active {
+    right: 0;
+  }
+  nav.menu ul {
+    display: block;
+    text-align: center;
+  }
+  nav.menu ul li {
+    padding: 20px 0px;
+  }
+  nav.menu ul li a {
+    font-size: 24px;
+  }
+}
+@media (max-width:576px){
+    header{
+        flex-wrap: wrap;
+        padding: 20px;
+    }
+    nav.menu{
+        top: 184px;
+    }
+    header .donate{
+        order:4;
+        width: 100%;
+        margin: 20px 0px;
+    }
+    header .donate > button{
+        display: block;
+        width: 100%;
+        max-width: 300px;
+        margin: 0px auto;
+    }
+}
