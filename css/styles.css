@@ -64,7 +64,8 @@ nav.menu ul li a {
 .btn-primary:hover {
   background: #1d8972;
 }
-.btn-primary:focus {
+.btn-primary:focus,
+.btn-cards:focus {
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.349);
 }
 section {
@@ -102,13 +103,17 @@ section.words {
 section.words .img {
   min-width: 55%;
 }
-section.words .img img {
+section.words .img img,
+section.why-us .img img {
   width: 100%;
   height: 100%;
 }
 section.words .content {
-  min-width: 45%;
   padding-left: 60px;
+}
+section.words .content,
+section.why-us .content {
+  min-width: 45%;
 }
 section.words .content h2 {
   font-weight: 600;
@@ -121,52 +126,109 @@ section.words .content ul {
   padding-left: 20px;
   margin-bottom: 30px;
 }
-section.donate{
+section.donate,
+section.why-us {
   padding: 30px 20px 30px 70px;
 }
-section.donate .heading{
+.heading {
   text-align: center;
 }
-.heading h2{
+.heading h2 {
   font-weight: 600;
   font-size: 1.7rem;
 }
-.line{
+.line {
   border: 2px solid rgb(228, 228, 228);
   width: 100px;
   margin: 0px auto;
   border-radius: 10px;
 }
-p{
+p {
   max-width: 800px;
-  margin:0px auto;
+  margin: 0px auto;
   color: rgb(136, 136, 136);
 }
-.cards{
+.cards {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   margin-top: 30px;
 }
-.card{
+.card {
   max-width: 380px;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   overflow: hidden;
   margin: 15px 10px;
 }
-.card .card-header .img-fluid{
+.card .card-header .img-fluid {
   max-width: 100%;
 }
-.card .card-body{
+.card .card-body {
   padding: 20px;
 }
-.card-body ul{
+.card-body ul {
   margin: 10px 0px 20px 0px;
   padding-left: 20px;
 }
-.card .card-body h3{
+.card .card-body h3 {
   font-weight: 600;
+}
+.card-body .btn-cards {
+  border: 1px solid #1d8972;
+  margin: 0px 10px;
+  color: #1d8972;
+}
+.card-body .buttons {
+  display: flex;
+  justify-content: space-between;
+}
+.card-body .buttons a {
+  width: 45%;
+  text-align: center;
+}
+
+.why-us .flex {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+section.why-us .img {
+  min-width: 55%;
+  align-self: center;
+}
+.why-us .content {
+  max-width: 60%;
+  display: flex;
+  flex-wrap: wrap;
+}
+section.why-us .box {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  margin: 10px;
+}
+section.why-us .box .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  background: #2bb9ab;
+  width: 24px;
+  height: 24px;
+  border-radius: 100%;
+  padding: 20px;
+}
+section.why-us i {
+  color: #fff;
+}
+section.why-us .text h3 {
+  padding-top: 5px;
+}
+section.why-us .text p {
+  margin: 5px 0px;
 }
 @media (max-width: 992px) {
   header {
@@ -179,7 +241,8 @@ p{
     flex-basis: 50%;
   }
   section.words,
-  section.donate {
+  section.donate,
+  section.why-us {
     padding: 0px 20px 0px 40px;
     margin: 60px 0px;
   }
@@ -202,12 +265,20 @@ p{
   section.words .content ul li {
     font-size: 0.9rem;
   }
-  .cards{
+  .cards {
     justify-content: center;
   }
-  .card{
+  .card {
     max-width: 70%;
     min-width: 280px;
+  }
+  .why-us .flex {
+    flex-direction: column;
+  }
+  .why-us .content,
+  section.why-us .img {
+    max-width: 80%;
+    margin-top: 20px;
   }
 }
 @media (max-width: 768px) {
@@ -310,8 +381,8 @@ p{
     max-width: 300px;
     margin: 0px auto;
   }
-  .content{
-	  padding-right: 0px;
+  .content {
+    padding-right: 0px;
   }
   section.banner {
     padding: 130px 20px 0px 20px;
@@ -334,4 +405,18 @@ p{
   section.words .content p {
     width: 100%;
   }
+  .why-us .content,
+  section.why-us .img {
+    max-width: 100%;
+  }
+  section.why-us .text p {
+    margin: 5px 0px;
+  }
+  .why-us .content p {
+    width: 100%;
+    margin: 10px 0px;
+  }
+  section.why-us .box{
+    padding: 12px 5px;
+    margin: 10px 5px;  
 }
