@@ -121,6 +121,53 @@ section.words .content ul {
   padding-left: 20px;
   margin-bottom: 30px;
 }
+section.donate{
+  padding: 30px 20px 30px 70px;
+}
+section.donate .heading{
+  text-align: center;
+}
+.heading h2{
+  font-weight: 600;
+  font-size: 1.7rem;
+}
+.line{
+  border: 2px solid rgb(228, 228, 228);
+  width: 100px;
+  margin: 0px auto;
+  border-radius: 10px;
+}
+p{
+  max-width: 800px;
+  margin:0px auto;
+  color: rgb(136, 136, 136);
+}
+.cards{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+.card{
+  max-width: 380px;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 15px 10px;
+}
+.card .card-header .img-fluid{
+  max-width: 100%;
+}
+.card .card-body{
+  padding: 20px;
+}
+.card-body ul{
+  margin: 10px 0px 20px 0px;
+  padding-left: 20px;
+}
+.card .card-body h3{
+  font-weight: 600;
+}
 @media (max-width: 992px) {
   header {
     padding: 20px 60px;
@@ -131,7 +178,8 @@ section.words .content ul {
   nav {
     flex-basis: 50%;
   }
-  section.words {
+  section.words,
+  section.donate {
     padding: 0px 20px 0px 40px;
     margin: 60px 0px;
   }
@@ -141,7 +189,8 @@ section.words .content ul {
   section.words .content {
     padding-left: 80px;
   }
-  section.words .content h2 {
+  section.words .content h2,
+  section.donate h2 {
     font-weight: 600;
     font-size: 1.5rem;
   }
@@ -152,6 +201,13 @@ section.words .content ul {
   }
   section.words .content ul li {
     font-size: 0.9rem;
+  }
+  .cards{
+    justify-content: center;
+  }
+  .card{
+    max-width: 70%;
+    min-width: 280px;
   }
 }
 @media (max-width: 768px) {
@@ -267,10 +323,12 @@ section.words .content ul {
   section.banner h1 {
     font-size: 2.5rem;
   }
-  section.words {
+  section.words,
+  section.donate {
     padding: 0px 20px 0px 20px;
   }
-  section.words .content h2 {
+  section.words .content h2,
+  section.donate h2 {
     font-size: 1.3rem;
   }
   section.words .content p {
