@@ -17,10 +17,10 @@ a {
 header {
   position: fixed;
   width: 100%;
-  padding: 20px 70px;
+  padding: 20px 30px;
 
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 
   transition: all 500ms;
@@ -74,7 +74,7 @@ section {
 section.banner {
   display: flex;
   min-height: 90vh;
-  padding: 0px 20px 0px 70px;
+  padding: 0px 20px 0px 30px;
 }
 .content {
   align-self: center;
@@ -98,7 +98,6 @@ section .img img {
 section.words {
   display: flex;
   justify-content: space-between;
-  padding: 30px 20px 30px 70px;
 }
 section.words .img {
   min-width: 55%;
@@ -127,13 +126,15 @@ section.words .content ul {
   margin-bottom: 30px;
 }
 section.donate,
-section.why-us {
-  padding: 30px 20px 30px 70px;
+section.why-us,
+section.newsletter,
+section.words {
+  padding: 30px 20px 30px 30px;
 }
 .heading {
   text-align: center;
 }
-.heading h2 {
+h2 {
   font-weight: 600;
   font-size: 1.7rem;
 }
@@ -171,7 +172,7 @@ p {
   margin: 10px 0px 20px 0px;
   padding-left: 20px;
 }
-.card .card-body h3 {
+h3 {
   font-weight: 600;
 }
 .card-body .btn-cards {
@@ -188,17 +189,16 @@ p {
   text-align: center;
 }
 
-.why-us .flex {
+section.why-us .flex {
   display: flex;
   justify-content: space-between;
   margin-top: 30px;
 }
-
 section.why-us .img {
   min-width: 55%;
   align-self: center;
 }
-.why-us .content {
+section.why-us .content {
   max-width: 60%;
   display: flex;
   flex-wrap: wrap;
@@ -230,9 +230,39 @@ section.why-us .text h3 {
 section.why-us .text p {
   margin: 5px 0px;
 }
+
+section.newsletter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: right;
+}
+section.newsletter .img {
+  max-width: 40%;
+}
+section.newsletter .content {
+  padding: 20px 20px 20px 60px;
+}
+section.newsletter p {
+  width: 100%;
+}
+
+input[type="email"] {
+  height: 46px;
+  min-width: 50%;
+  border-radius: 5px 0px 0px 5px;
+  outline: none;
+  border: 1px solid #1d8972;
+  padding: 0px 16px;
+}
+
+section.newsletter .btn {
+  margin-left: -5px;
+  border-radius: 0px 5px 5px 0px;
+}
 @media (max-width: 992px) {
   header {
-    padding: 20px 60px;
+    padding: 20px 20px;
   }
   section.banner {
     padding: 0px 20px 0px 40px;
@@ -242,8 +272,9 @@ section.why-us .text p {
   }
   section.words,
   section.donate,
-  section.why-us {
-    padding: 0px 20px 0px 40px;
+  section.why-us,
+  section.newsletter {
+    padding: 0px 20px 0px 20px;
     margin: 60px 0px;
   }
   section.words .img {
@@ -252,8 +283,7 @@ section.why-us .text p {
   section.words .content {
     padding-left: 80px;
   }
-  section.words .content h2,
-  section.donate h2 {
+  h2 {
     font-weight: 600;
     font-size: 1.5rem;
   }
@@ -272,13 +302,22 @@ section.why-us .text p {
     max-width: 70%;
     min-width: 280px;
   }
-  .why-us .flex {
+  section.why-us .flex {
     flex-direction: column;
   }
-  .why-us .content,
+  section.why-us .content,
   section.why-us .img {
     max-width: 80%;
     margin-top: 20px;
+  }
+  section.newsletter {
+    flex-direction: column-reverse;
+    justify-content: center;
+    text-align: center;
+  }
+  section.newsletter .img {
+    min-width: 75%;
+    margin-top: 30px;
   }
 }
 @media (max-width: 768px) {
@@ -360,6 +399,9 @@ section.why-us .text p {
   section.words .content {
     margin-bottom: 30px;
   }
+  section.newsletter .content {
+    padding: 0px;
+  }
 }
 @media (max-width: 576px) {
   header {
@@ -395,15 +437,21 @@ section.why-us .text p {
     font-size: 2.5rem;
   }
   section.words,
-  section.donate {
-    padding: 0px 20px 0px 20px;
+  section.donate,
+  section.why-us,
+  section.newsletter {
+    padding: 0px 20px;
+    margin: 30px 0px;
   }
-  section.words .content h2,
-  section.donate h2 {
+  h2 {
     font-size: 1.3rem;
   }
   section.words .content p {
     width: 100%;
+  }
+  section.why-us .content,
+  section.why-us .img {
+    max-width: 100%;
   }
   .why-us .content,
   section.why-us .img {
@@ -412,11 +460,21 @@ section.why-us .text p {
   section.why-us .text p {
     margin: 5px 0px;
   }
-  .why-us .content p {
+  section.why-us .content p {
     width: 100%;
     margin: 10px 0px;
   }
-  section.why-us .box{
+  section.why-us .box {
     padding: 12px 5px;
-    margin: 10px 5px;  
+    margin: 10px 5px;
+  }
+  input[type="email"]{
+    width: 100%;
+    border-radius: 5px;
+  }
+  section.newsletter .btn{
+    width: 40%;
+    margin-top: 10px;
+    border-radius: 5px;
+  }
 }
