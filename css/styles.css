@@ -10,9 +10,13 @@
 }
 a {
   text-decoration: none;
+  transition: all 500ms;
 }
-.h {
-  height: 1400px;
+nav a:hover{
+  color: #2bb9ab;
+}
+footer a:hover {
+  color: #fff;
 }
 header {
   position: fixed;
@@ -65,10 +69,14 @@ nav.menu ul li a {
 .btn-primary:hover {
   background: #1d8972;
 }
+.btn-secondary:hover{
+  color: #333;
+}
 .btn-primary:focus,
 .btn-cards:focus {
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.349);
 }
+
 section {
   transition: all 500ms;
 }
@@ -130,7 +138,8 @@ section.donate,
 section.why-us,
 section.newsletter,
 section.words,
-section.accordion {
+section.accordion,
+footer {
   padding: 30px 20px 30px 30px;
 }
 .heading {
@@ -326,6 +335,91 @@ section.accordion .button a{
   max-width: 300px;
 }
 
+footer{
+  display: flex;
+  justify-content: space-between;
+  background: #333;
+}
+footer > div{
+  padding: 0px 20px;
+}
+footer div.about{
+  flex-basis: 33%;
+}
+footer div.quick-links{
+  flex-basis: 20%;
+}
+footer div.form-contact{
+  flex-basis: 40%;
+}
+footer h3{
+  font-size: 1.5rem;
+  color: #fff;
+}
+footer p{
+  color: #e6e3e3;
+  margin: 10px 0px;
+}
+footer span{
+  display: flex;
+  align-items:center;
+}
+footer span i,
+footer span a{
+  color:#2bb9ab;
+}
+footer span i{
+  margin-right: 5px;
+}
+
+footer ul li{
+  list-style: none;
+}
+footer ul li i,
+footer ul li a{
+  color: #2bb9ab;
+  font-weight: 300;
+}
+footer ul li a{
+  margin-left: 5px;
+}
+
+.form-contact form div{
+  position:relative;
+  margin: 10px 0px 25px 0px;
+}
+.form-contact form div label{
+  position: absolute;
+  z-index: 100;
+  color: rgb(199, 199, 199);
+  top: 10px;
+  left: 16px;
+  pointer-events: none;
+  transition: all 500ms;
+}
+.form-contact input[type="email"],
+.form-contact textarea{
+  outline: none;
+  background: rgba(0, 0, 0, 0.185);
+  border: none;
+  width: 100%;
+  padding-left: 15px;
+  color: #fff;
+}
+.form-contact textarea{
+  resize: none;
+  min-height: 100px;
+  padding: 10px 15px;
+}
+.form-contact input[type="email"]:valid ~ label,
+.form-contact input[type="email"]:focus ~ label,
+.form-contact textarea:valid ~ label,
+.form-contact textarea:focus ~ label{
+  color:#2bb9ab;
+  font-size: 0.8rem;
+  top: -20px;
+  left:0px;
+}
 @media (max-width: 992px) {
   header {
     padding: 20px 20px;
@@ -339,9 +433,17 @@ section.accordion .button a{
   section.words,
   section.donate,
   section.why-us,
-  section.newsletter {
+  section.newsletter{
     padding: 0px 20px 0px 20px;
     margin: 60px 0px;
+  }
+  footer{
+    padding:20px;
+    flex-direction: column;
+  }
+  footer > div{
+    margin: 20px 0px;
+    max-width: 700px;
   }
   section.words .img {
     min-width: 50%;
@@ -505,7 +607,7 @@ section.accordion .button a{
   section.words,
   section.donate,
   section.why-us,
-  section.newsletter {
+  section.newsletter{
     padding: 0px 20px;
     margin: 30px 0px;
   }
@@ -542,5 +644,9 @@ section.accordion .button a{
     width: 40%;
     margin-top: 10px;
     border-radius: 5px;
+  }
+
+  footer div.about span{
+    flex-wrap: wrap;
   }
 }
