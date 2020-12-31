@@ -11,11 +11,12 @@
     <meta property="og:site_name" content="Charity"/>
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"/>
     <title>Charity</title>
-    <link rel="stylesheet" href="css/styles.css"/>
-    <script src="https://kit.fontawesome.com/87b8bff04b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/styles.min.css"/>
+    <script src="https://kit.fontawesome.com/87b8bff04b.js" crossorigin="anonymous"></script><!--ANIMATIONS-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
   </head>
   <body>
-    <header>
+    <header data-aos="fade-down" data-aos-once="true">
       <div class="logo"><span><a href="#">Charity</a></span></div>
       <div class="toggle" onclick="toggleMenu();"></div>
       <nav class="menu">
@@ -31,15 +32,15 @@
     </header>
     <main class="container">
       <section class="banner">
-        <div class="content">
+        <div class="content" data-aos="fade-right" data-aos-duration="1500" data-aos-once="true">
           <h1>Your healing begins with charity.</h1>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi sapiente facere quibusdam, nam corporis id explicabo hic animi!</p><a class="btn btn-primary" href="#">Donate Now</a>
         </div>
-        <div class="img"><img src="images/img2.webp" alt=""/></div>
+        <div class="img" data-aos="fade-left" data-aos-duration="1500" data-aos-once="true"><img src="images/img2.webp" loading="eager" alt=""/></div>
       </section>
       <section class="words">
-        <div class="img"><img src="images/img3.webp" alt=""/></div>
-        <div class="content">
+        <div class="img" data-aos="fade-right" data-aos-duration="1500" data-aos-once="true"><img src="images/img3.webp" loading="eager" alt=""/></div>
+        <div class="content" data-aos="fade-left" data-aos-duration="1500" data-aos-once="true">
           <h2>Actions speaks much louder than words actually</h2>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid iste laborum dignissimos id, aperiam adipisci asperiores porro ducimus inventore quae quam deleniti iusto! Ex expedita asperiores libero sunt culpa ab!</p>
           <ul>
@@ -50,14 +51,14 @@
         </div>
       </section>
       <section class="donate">
-        <div class="heading">
+        <div class="heading" data-aos="fade-in" data-aos-duration="1500" data-aos-once="true">
           <h2>Donate for a good cause </h2>
           <div class="line"></div>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, modi. Doloribus numquam aliquam labore autem. Et.</p>
         </div>
         <div class="cards">
-          <div Class="card">
-            <div class="card-header"><img class="img-fluid" src="images/img3.webp" alt=""/></div>
+          <div Class="card" data-aos="fade-right" data-aos-duration="1500" data-aos-once="true">
+            <div class="card-header"><img class="img-fluid" src="images/img3.webp" alt="" loading="lazy"/></div>
             <div class="card-body">
               <h3>Lorem, ipsum.</h3>
               <ul>
@@ -67,8 +68,8 @@
               <div class="buttons"><a class="btn btn-primary" href="#">Donate</a><a class="btn btn-cards" href="#">More </a></div>
             </div>
           </div>
-          <div Class="card">
-            <div class="card-header"><img class="img-fluid" src="images/img2.webp" alt=""/></div>
+          <div Class="card" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true">
+            <div class="card-header"><img class="img-fluid" src="images/img2.webp" alt="" loading="lazy"/></div>
             <div class="card-body">
               <h3>Lorem, ipsum.</h3>
               <ul>
@@ -78,8 +79,8 @@
               <div class="buttons"><a class="btn btn-primary" href="#">Donate</a><a class="btn btn-cards" href="#">More </a></div>
             </div>
           </div>
-          <div Class="card">
-            <div class="card-header"><img class="img-fluid" src="images/img3.webp" alt=""/></div>
+          <div Class="card" data-aos="fade-left" data-aos-duration="1500" data-aos-once="true">
+            <div class="card-header"><img class="img-fluid" src="images/img3.webp" alt="" loading="lazy"/></div>
             <div class="card-body">
               <h3>Lorem, ipsum.</h3>
               <ul>
@@ -92,35 +93,35 @@
         </div>
       </section>
       <section class="why-us">
-        <div class="heading">
+        <div class="heading" data-aos="fade-in" data-aos-duration="1500" data-aos-once="true">
           <h2>Why Us? </h2>
           <div class="line"></div>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, modi. Doloribus numquam aliquam labore autem. Et.</p>
         </div>
         <div class="flex">
           <div class="content">
-            <div class="box">
+            <div class="box" data-aos="fade-right" data-aos-duration="1500" data-aos-once="true">
               <div class="icon"><i class="fa fa-user"></i></div>
               <div class="text">
                 <h3>Lorem, ipsum dolor.</h3>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione saepe veritatis perspiciatis voluptatibus sed!</p>
               </div>
             </div>
-            <div class="box">
+            <div class="box" data-aos="fade-right" data-aos-duration="1500" data-aos-once="true">
               <div class="icon"><i class="fa fa-user"></i></div>
               <div class="text">
                 <h3>Lorem, ipsum dolor.</h3>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione saepe veritatis perspiciatis voluptatibus sed!</p>
               </div>
             </div>
-            <div class="box">
+            <div class="box" data-aos="fade-right" data-aos-duration="1500" data-aos-once="true">
               <div class="icon"><i class="fa fa-user"></i></div>
               <div class="text">
                 <h3>Lorem, ipsum dolor.</h3>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione saepe veritatis perspiciatis voluptatibus sed!</p>
               </div>
             </div>
-            <div class="box">
+            <div class="box" data-aos="fade-right" data-aos-duration="1500" data-aos-once="true">
               <div class="icon"><i class="fa fa-user"></i></div>
               <div class="text">
                 <h3>Lorem, ipsum dolor.</h3>
@@ -128,12 +129,12 @@
               </div>
             </div>
           </div>
-          <div class="img"><img class="img-fluid" src="images/img1.webp" alt=""/></div>
+          <div class="img" data-aos="fade-left" data-aos-duration="1500" data-aos-once="true"><img class="img-fluid" src="images/img1.webp" alt="" loading="lazy"/></div>
         </div>
       </section>
       <section class="newsletter">
-        <div class="img"><img src="images/newsletter.svg" alt="Newsletter image"/></div>
-        <div class="content">
+        <div class="img" data-aos="fade-right" data-aos-duration="1500" data-aos-once="true"><img src="images/newsletter.svg" loading="lazy" alt="Newsletter image"/></div>
+        <div class="content" data-aos="fade-left" data-aos-duration="1500" data-aos-once="true">
           <h2>Suscribe right now a newsletter</h2>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore a officia nostrum facere at illum similique consectetur, architecto cupiditate quaerat nemo. Quidem corporis blanditiis quis a quo consectetur minima dolorum.</p>
           <form class="form" action="" onsubmit="return false;">
@@ -143,11 +144,11 @@
         </div>
       </section>
       <section class="accordion">
-        <div class="heading">
+        <div class="heading" data-aos="fade-in" data-aos-duration="1500" data-aos-once="true">
           <h2>Frequently Asked Question</h2>
           <div class="line"></div>
         </div>
-        <div class="accordion-tabs">
+        <div class="accordion-tabs" data-aos="fade-in" data-aos-duration="1500" data-aos-once="true">
           <div class="tabs">
             <input type="radio" name="tabs" id="tab-1"/>
             <label for="tab-1"><span>Why did the chicken cross the road?</span>
@@ -189,11 +190,11 @@
       </section>
     </main>
     <footer>
-      <div class="about">
+      <div class="about" data-aos="fade-right" data-aos-duration="1500" data-aos-once="true">
         <h3>Charity</h3>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem similique amet totam, dolorem quibusdam, accusantium ab maxime Lorem ipsum dolor sit amet consectetur.</p><span><i class="fa fa-envelope"></i><a href="mailto:danielhernandez9980@gmail.com">danielhernandez9980@gmail.com</a></span>
       </div>
-      <div class="quick-links">
+      <div class="quick-links" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true">
         <h3>Quick Links</h3>
         <ul>
           <li><i class="fas fa-chevron-right"><a href="#">Donate</a></i></li>
@@ -204,7 +205,7 @@
           <li><i class="fas fa-chevron-right"><a href="#">Terms And Conditions</a></i></li>
         </ul>
       </div>
-      <div class="form-contact">
+      <div class="form-contact" data-aos="fade-left" data-aos-duration="1500" data-aos-once="true">
         <h3>Contact Us</h3>
         <form action="#" onsubmit="return false;">
           <div>
@@ -219,6 +220,7 @@
         </form>
       </div>
     </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="js/scripts.js"></script>
   </body>
 </html>
